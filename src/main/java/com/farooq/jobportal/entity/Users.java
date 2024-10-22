@@ -12,7 +12,7 @@ import java.util.Date;
 public class Users {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
 
     @Column(unique = true)
@@ -28,18 +28,18 @@ public class Users {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
-    private UsersTypes usersTypeId;
+    private UsersType userTypeId;
 
     public Users() {
     }
 
-    public Users(int userId, String email, String password, boolean isActive, Date registrationDate, UsersTypes usersTypeId) {
+    public Users(int userId, String email, String password, boolean isActive, Date registrationDate, UsersType userTypeId) {
         this.userId = userId;
         this.email = email;
         this.password = password;
         this.isActive = isActive;
         this.registrationDate = registrationDate;
-        this.usersTypeId = usersTypeId;
+        this.userTypeId = userTypeId;
     }
 
     public int getUserId() {
@@ -62,8 +62,8 @@ public class Users {
         return registrationDate;
     }
 
-    public UsersTypes getUsersTypeId() {
-        return usersTypeId;
+    public UsersType getUserTypeId() {
+        return userTypeId;
     }
 
     public void setUserId(int userId) {
@@ -86,8 +86,8 @@ public class Users {
         this.registrationDate = registrationDate;
     }
 
-    public void setUsersTypeId(UsersTypes usersTypeId) {
-        this.usersTypeId = usersTypeId;
+    public void setUserTypeId(UsersType userTypeId) {
+        this.userTypeId = userTypeId;
     }
 
     @Override
@@ -98,7 +98,7 @@ public class Users {
                 ", password='" + password + '\'' +
                 ", isActive=" + isActive +
                 ", registrationDate=" + registrationDate +
-                ", usersTypeId=" + usersTypeId +
+                ", usersTypeId=" + userTypeId +
                 '}';
     }
 }

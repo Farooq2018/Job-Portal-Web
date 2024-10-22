@@ -6,10 +6,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "users_type")
-public class UsersTypes {
+public class UsersType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userTypeId;
 
     private String userTypeName;
@@ -17,10 +17,10 @@ public class UsersTypes {
     @OneToMany(targetEntity = Users.class, mappedBy = "userTypeId", cascade = CascadeType.ALL)
     private List<Users> users;
 
-    public UsersTypes() {
+    public UsersType() {
     }
 
-    public UsersTypes(int userTypeId, String userTypeName, List<Users> users) {
+    public UsersType(int userTypeId, String userTypeName, List<Users> users) {
         this.userTypeId = userTypeId;
         this.userTypeName = userTypeName;
         this.users = users;
