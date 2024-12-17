@@ -26,7 +26,7 @@ public class JobPostActivity {
     private JobCompany jobCompanyId;
 
     @Transient
-    private Boolean inActive;
+    private Boolean isActive;
 
     @Transient
     private Boolean isSaved;
@@ -45,12 +45,12 @@ public class JobPostActivity {
 
     }
 
-    public JobPostActivity(Integer jobPostId, Users postedById, JobLocation jobLocationId, JobCompany jobCompanyId, Boolean inActive, Boolean isSaved, String descriptionOfJob, String jobType, String salary, String remote, Date postedDate, String jobTitle) {
+    public JobPostActivity(Integer jobPostId, Users postedById, JobLocation jobLocationId, JobCompany jobCompanyId, Boolean isActive, Boolean isSaved, String descriptionOfJob, String jobType, String salary, String remote, Date postedDate, String jobTitle) {
         this.jobPostId = jobPostId;
         this.postedById = postedById;
         this.jobLocationId = jobLocationId;
         this.jobCompanyId = jobCompanyId;
-        this.inActive = inActive;
+        this.isActive = isActive;
         this.isSaved = isSaved;
         this.descriptionOfJob = descriptionOfJob;
         this.jobType = jobType;
@@ -92,19 +92,19 @@ public class JobPostActivity {
         this.jobCompanyId = jobCompanyId;
     }
 
-    public Boolean getInActive() {
-        return inActive;
+    public Boolean getIsActive() {
+        return isActive;
     }
 
-    public void setInActive(Boolean inActive) {
-        this.inActive = inActive;
+    public void setIsActive(Boolean isActive) {
+        this.isActive = isActive;
     }
 
-    public Boolean getSaved() {
+    public Boolean getIsSaved() {
         return isSaved;
     }
 
-    public void setSaved(Boolean saved) {
+    public void setIsSaved(Boolean saved) {
         isSaved = saved;
     }
 
@@ -163,7 +163,7 @@ public class JobPostActivity {
                 ", postedById=" + postedById +
                 ", jobLocationId=" + jobLocationId +
                 ", jobCompanyId=" + jobCompanyId +
-                ", inActive=" + inActive +
+                ", isActive=" + isActive +
                 ", isSaved=" + isSaved +
                 ", descriptionOfJob='" + descriptionOfJob + '\'' +
                 ", jobType='" + jobType + '\'' +
