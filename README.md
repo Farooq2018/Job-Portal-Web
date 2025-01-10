@@ -79,13 +79,17 @@ cd Farooq2018-Job-Portal-Web
 By default, the application will run on http://localhost:8080.
 
 ## Setup Database Configuration in application.properties file
-# Database Configuration (example for MySQL)
+Database Configuration (example for MySQL)
+
 spring.datasource.url=jdbc:mysql://localhost:3306/jobportal
+
 spring.datasource.username=root
+
 spring.datasource.password=password
 
-# Spring Security settings
+## Spring Security settings
 spring.security.user.name=user
+
 spring.security.user.password=password
 
 Make sure to configure the database settings according to your environment.
