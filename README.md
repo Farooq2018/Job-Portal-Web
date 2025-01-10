@@ -1,96 +1,96 @@
+
 # Job Portal Web Application
 
-Welcome to the **Farooq2018 Job Portal Web** project! This is a modern, user-friendly job portal web application designed for both job seekers and recruiters. It allows users to apply for jobs, save their favorite jobs, and manage their profiles seamlessly. Recruiters can post jobs and manage their recruitment process efficiently.
-
-This project uses **Spring Boot** for the backend, with a **Thymeleaf** frontend, and utilizes technologies like **Bootstrap**, **jQuery**, and **Summernote** for a responsive and interactive user experience.
-
----
+## Overview
+Job Portal is a web-based application designed to connect job seekers and recruiters. It allows users to search for jobs, apply for positions, manage profiles, and for recruiters to post job listings and review applications.
 
 ## Features
-
-- **For Job Seekers**:
-  - Create and manage job seeker profile
-  - Browse and search job listings
-  - Apply for jobs
-  - Save favorite job listings
-  - Manage applications and view applied job status
-  
-- **For Recruiters**:
-  - Create and manage recruiter profile
-  - Post new job openings
-  - Manage job post activities
-  - View applicants and their profiles
-
-- **Admin Features** (If applicable):
-  - Manage all users (job seekers and recruiters)
-  - Approve or reject job applications
-  - View job stats and activity
-
----
-
-## Tech Stack
-
-- **Backend**: 
-  - Spring Boot (Java)
-  - Spring Security for authentication and authorization
-  - Spring Data JPA for database interaction
-  
-- **Frontend**:
-  - Thymeleaf for templating engine
-  - Bootstrap for responsive UI
-  - Summernote for rich text editing
-  
-- **Database**:
-  - H2 Database (for development) / MySQL (for production)
-  
-- **Build Tool**:
-  - Maven
-  
-- **Other**:
-  - Java 8 or higher
-  - Maven for dependency management and build automation
-
----
+- **Job Seekers**:
+  - Search and apply for jobs
+  - Save favorite jobs
+  - Manage personal profiles
+- **Recruiters**:
+  - Post job listings
+  - Manage job applications
+  - View job seeker profiles
 
 ## Project Structure
+```plaintext
+Farooq2018-Job-Portal-Web/
+├── README.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── photos/
+│   ├── candidate/
+│   │   └── 17/
+│   └── recruiter/
+│       └── 15/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── farooq/
+│   │   │           └── jobportal/
+│   │   │               ├── JobportalApplication.java
+│   │   │               ├── config/
+│   │   │               ├── controller/
+│   │   │               ├── entity/
+│   │   │               ├── repository/
+│   │   │               ├── services/
+│   │   │               └── util/
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       ├── static/
+│   │       └── templates/
+│   └── test/
+└── .mvn/
+```
 
-The project is organized into several key modules:
-Farooq2018-Job-Portal-Web/ ├── README.md ├── mvnw ├── mvnw.cmd ├── pom.xml ├── photos/ # Contains photo assets for candidate and recruiter profiles │ ├── candidate/ │ │ └── 17/ │ └── recruiter/ │ └── 15/ ├── src/ │ ├── main/ │ │ ├── java/ # Java source code │ │ │ └── com/ │ │ │ └── farooq/ │ │ │ └── jobportal/ │ │ │ ├── controller/ # Controllers for various pages │ │ │ ├── entity/ # JPA entities for database tables │ │ │ ├── repository/ # Data access layers │ │ │ ├── services/ # Business logic and service layers │ │ │ ├── util/ # Utility classes │ │ │ └── config/ # Configuration files for Spring Boot │ │ └── resources/ │ │ ├── static/ # Static assets (CSS, JavaScript, fonts, images) │ │ ├── templates/ # HTML templates (Thymeleaf) │ │ └── application.properties # Application configuration file │ └── test/ # Unit and integration tests │ └── java/
-│ └── com/ │ └── farooq/ │ └── jobportal/ │ └── JobportalApplicationTests.java └── .mvn/ └── wrapper/ └── maven-wrapper.properties
-
-
----
+### Key Directories
+- `photos/`: Contains profile photos for candidates and recruiters.
+- `src/main/java/`: Contains Java source files organized by packages.
+  - `config/`: Configuration files for the application.
+  - `controller/`: Handles web requests and responses.
+  - `entity/`: Contains entity classes mapping to database tables.
+  - `repository/`: Interfaces for database operations.
+  - `services/`: Contains business logic and service classes.
+  - `util/`: Utility classes for various functionalities.
+- `src/main/resources/`: Resources such as configuration files and templates.
+  - `static/`: Static assets like CSS, JS, and fonts.
+  - `templates/`: HTML templates for views.
+- `src/test/java/`: Test classes for the application.
 
 ## Installation
 
-To set up the project locally:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/Farooq2018-Job-Portal-Web.git
+   ```
 
-### 1. Clone the repository
+2. **Navigate to the project directory**:
+   ```bash
+   cd Farooq2018-Job-Portal-Web
+   ```
 
-git clone https://github.com/yourusername/Farooq2018-Job-Portal-Web.git
+3. **Run the application**:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
-cd Farooq2018-Job-Portal-Web
+## Configuration
+Modify the `application.properties` file in `src/main/resources/` to set up your database and other configurations.
 
-## Make use of Maven to build the Project
-./mvnw clean install
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-./mvnw spring-boot:run
+## Acknowledgements
+- Spring Boot
+- Hibernate
+- Thymeleaf
 
-By default, the application will run on http://localhost:8080.
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
 
-## Setup Database Configuration in application.properties file
-Database Configuration (example for MySQL)
-
-spring.datasource.url=jdbc:mysql://localhost:3306/jobportal
-
-spring.datasource.username=root
-
-spring.datasource.password=password
-
-## Spring Security settings
-spring.security.user.name=user
-
-spring.security.user.password=password
-
-Make sure to configure the database settings according to your environment.
-
+## Contact
+For any inquiries or feedback, please contact Farooq at [farooqahm@gmail.com](mailto:farooqahm97@gmail.com).
