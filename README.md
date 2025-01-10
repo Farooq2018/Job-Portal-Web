@@ -73,6 +73,7 @@ cd Farooq2018-Job-Portal-Web
 
 ## Make use of Maven to build the Project
 ./mvnw clean install
+
 ./mvnw spring-boot:run
 
 By default, the application will run on http://localhost:8080.
