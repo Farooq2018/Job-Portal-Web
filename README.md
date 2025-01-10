@@ -68,6 +68,7 @@ To set up the project locally:
 ### 1. Clone the repository
 
 git clone https://github.com/yourusername/Farooq2018-Job-Portal-Web.git
+
 cd Farooq2018-Job-Portal-Web
 
 ## Make use of Maven to build the Project
